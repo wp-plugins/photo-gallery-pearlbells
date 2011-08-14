@@ -54,3 +54,6 @@
                    
            <input type="submit" name="submit" value="Submit"/>
         </form>
+        
+         <p>Created by <a href="http://pearlbells.co.uk/" target="_blank">Pearlbells</a><br/> Follow me : <a href="http://twitter.com/#!/pearlbells" target="_blank">Twitter</a><br/>Please Donate : <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W884YAWEDPA9U" target="_blank">Click Here</a></p>
+         <p>Feel free to email me lizeipe@gmail.com for any advice or suggestion.</p>
