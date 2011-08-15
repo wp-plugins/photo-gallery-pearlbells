@@ -29,7 +29,7 @@ It is possible to customise the display features to sync with the look and feel 
 == Installation ==
 
 1. Download and unzip the file.
-2. Upload the folder named `pearl_lightbox` to the `/wp-content/plugins/` directory.
+2. Upload the folder named `photo-gallery-pearlbells` to the `/wp-content/plugins/` directory.
 3. Upload images to the webpage where you want to display image thumbnails.
 4. Activate the plugin through the 'Plugins' menu in WordPress
 5. Go to the webpage where you want to display the Image thumbnails and enter `[pearl_lightbox_display]`
