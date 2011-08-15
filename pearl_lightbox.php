@@ -28,8 +28,8 @@ class pearl_lightbox_class
 {
 	function pearl_lightbox_css()
 	{
-		$myStyleUrl = WP_PLUGIN_URL . '/pearl_lightbox/css/pearl_lightbox_css.css';
-        $myStyleFile = WP_PLUGIN_DIR . '/pearl_lightbox/css/pearl_lightbox_css.css';
+		$myStyleUrl = WP_PLUGIN_URL . '/photo-gallery-pearlbells/css/pearl_lightbox_css.css';
+        $myStyleFile = WP_PLUGIN_DIR . '/photo-gallery-pearlbells/css/pearl_lightbox_css.css';
         if ( file_exists($myStyleFile) ) 
 		{
             wp_register_style('myStyleSheets', $myStyleUrl);
@@ -215,7 +215,7 @@ class pearl_lightbox_class
 				$display_image .= '<div class="pearl_lightbox_active">';
 				$counter++;
 			}
-				$display_image .= '<a href="'.wp_get_attachment_url($imageID).'" class="lightbox" title="'.get_the_title($imageID).'" ><img src="'.wp_get_attachment_thumb_url($imageID).'"/></a>';
+				$display_image .= '<a href="'.wp_get_attachment_url($imageID).'" class="lightbox" title="'.get_the_title($imageID).'" ><img src="'.wp_get_attachment_thumb_url($imageID).'" border="none"/></a>';
 				$display_image .= '<div class="pearl_lightbox_title">';
 				$title = get_the_title($imageID);
 				$title_length =	strlen(get_the_title($imageID));
