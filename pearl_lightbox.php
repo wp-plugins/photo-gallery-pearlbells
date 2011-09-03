@@ -56,7 +56,7 @@ class pearl_lightbox_class
 		var myimage = $jquery(this).attr('href');
 		var mytitle = $jquery(this).attr('title');
 		
-		$jquery('.box').prepend('<p>'+'<img src="'+myimage+'" width="400" /><br/>'+mytitle+'</p>');
+		$jquery('.box').prepend('<p>'+'<img src="'+myimage+'"  /><br/>'+mytitle+'</p>');
 		$jquery(this).removeClass('lightbox');
 		$jquery(this).addClass('active');
 		
@@ -101,7 +101,7 @@ class pearl_lightbox_class
 		var myimage = nextimage.attr('href');
 		var mytitle = nextimage.attr('title');
 		$jquery('.box p').remove();
-		$jquery('.box').prepend('<p>'+'<img src="'+myimage+'" width="400" /><br/>'+mytitle+'</p>');
+		$jquery('.box').prepend('<p>'+'<img src="'+myimage+'" /><br/>'+mytitle+'</p>');
 		
 	}
 	
@@ -124,7 +124,7 @@ class pearl_lightbox_class
 		var myimage = nextimage.attr('href');
 		var mytitle = nextimage.attr('title');
 		$jquery('.box p').remove();
-		$jquery('.box').prepend('<p>'+'<img src="'+myimage+'" width="400" /><br/>'+mytitle+'</p>');
+		$jquery('.box').prepend('<p>'+'<img src="'+myimage+'"  /><br/>'+mytitle+'</p>');
 	}
 
 		
@@ -185,7 +185,7 @@ class pearl_lightbox_class
 		var myimage = nextimage.attr('href');
 		var mytitle = nextimage.attr('title');
 		$jquery('.box p').remove().fadeOut(1000);
-		$jquery('.box').prepend('<p>'+'<img src="'+myimage+'" width="400" /><br/>'+mytitle+'</p>').fadeIn(1000);
+		$jquery('.box').prepend('<p>'+'<img src="'+myimage+'" /><br/>'+mytitle+'</p>').fadeIn(1000);
 	   }
 		
 		</script>
