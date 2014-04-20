@@ -15,7 +15,7 @@ box etc.
 This plugin helps to create a photo gallery for your website. This plugin display images as a thumbnail on a webpage or a blog. A lightbox / popup window will display the full size image on clicking the thumbnail. There are various features in the popup window such as slideshow, navigate to previous/next image, close the popup
 box etc.
 
-How to Install - <a href="http://pearlbells.co.uk/joomlaportfolio/7-photo-gallery.html">Click here</a>
+How to Install - <a href="http://pearlbells.co.uk/extensions/photo-gallery">Click here</a>
 
 
 It is possible to customise the display features to sync with the look and feel of your website. The customisation features include:
@@ -61,6 +61,10 @@ the directory of the stable readme.txt, so in this case, `/tags/4.3/screenshot-1
 2. This is the second screen shot
 
 == Changelog ==
+
+= 2.0 =
+* Changed css styling
+
 
 = 1.0 =
 * Initial Release
