@@ -53,12 +53,12 @@
 	opacity:1.0;
 	z-index:51;
 	text-align:center;
+        overflow: hidden;
 	
 }
 .box img
 {
-	margin:10px;
-	margin-bottom:0px;
+	
 }
 .box p
 {

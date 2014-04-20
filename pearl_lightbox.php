@@ -26,19 +26,14 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 $pearl_lightbox_class = new pearl_lightbox_class();
 class pearl_lightbox_class
 {
-	function pearl_lightbox_css()
-	{
-		$myStyleUrl = WP_PLUGIN_URL . '/photo-gallery-pearlbells/css/pearl_lightbox_css.css';
-        $myStyleFile = WP_PLUGIN_DIR . '/photo-gallery-pearlbells/css/pearl_lightbox_css.css';
-        if ( file_exists($myStyleFile) ) 
-		{
-            wp_register_style('myStyleSheets', $myStyleUrl);
-            wp_enqueue_style( 'myStyleSheets');
-        }
-	}
+  
+        function safely_add_stylesheet() {
+             wp_enqueue_style( 'pearl_lightbox', plugins_url('css/pearl_lightbox_css.css', __FILE__) );
+         }
 	
 	function pearl_lightbox_script()
 	{
+           
 		wp_deregister_script( 'jquery' );
 		wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js');
 		wp_enqueue_script( 'jquery' );?>
@@ -133,7 +128,7 @@ class pearl_lightbox_class
 		{
 			// Get options to set thumbnail style
 			var pearl_thumbnail_height ='<?php echo get_option('pearl_thumbnail_height');?>';
-	        var pearl_thumbnail_width ='<?php echo get_option('pearl_thumbnail_width');?>';
+                        var pearl_thumbnail_width ='<?php echo get_option('pearl_thumbnail_width');?>';
 			var pearl_thumbnail_margin ='<?php echo get_option('pearl_thumbnail_margin');?>';
 			var pearl_thumbnail_border_color ='<?php echo get_option('pearl_thumbnail_border_color');?>';
 			var pearl_thumbnail_border_width ='<?php echo get_option('pearl_thumbnail_border_width');?>';
@@ -142,13 +137,13 @@ class pearl_lightbox_class
 			
 			// Get options to set popup box style
 			var pearl_popupbox_height ='<?php echo get_option('pearl_popupbox_height');?>';
-	        var pearl_popupbox_width ='<?php echo get_option('pearl_popupbox_width');?>';
+                        var pearl_popupbox_width ='<?php echo get_option('pearl_popupbox_width');?>';
 			var pearl_popupbox_bg_color ='<?php echo get_option('pearl_popupbox_bg_color');?>';
 			var pearl_popupbox_border_color ='<?php echo get_option('pearl_popupbox_border_color');?>';
 			var pearl_popupbox_border_width ='<?php echo get_option('pearl_popupbox_border_width');?>';
 			
 		   $jquery('#pearl_lightbox .pearl_lightbox_active').css({
-           "margin":pearl_thumbnail_margin,
+                    "margin":pearl_thumbnail_margin,
 		   "width":pearl_thumbnail_width,
 		   "height":pearl_thumbnail_height,
 		   "border-width":pearl_thumbnail_border_width,
@@ -158,7 +153,7 @@ class pearl_lightbox_class
 		   "padding": pearl_thumbnail_padding});
 		   
 		    $jquery('.box').css({
-           "background-color":pearl_popupbox_bg_color,
+                   "background-color":pearl_popupbox_bg_color,
 		   "width":pearl_popupbox_width,
 		   "height":pearl_popupbox_height,
 		   "border-width":pearl_popupbox_border_width,
@@ -195,6 +190,8 @@ class pearl_lightbox_class
 	
 	function pearl_lightbox_getImage($atts, $content = null)
 	{
+               
+                
 		$images =& get_children( 'post_type=attachment&post_mime_type=image&post_parent=' . get_the_id() );
 		$i=1;
 		$display_image = '<div id="pearl_lightbox">';
@@ -426,7 +423,7 @@ class pearl_lightbox_class
 	
 }
 add_action('admin_menu',array($pearl_lightbox_class,'pearl_lightbox_menu'));
-add_action('wp_print_styles', array($pearl_lightbox_class,'pearl_lightbox_css'));
+add_action( 'wp_enqueue_scripts', array($pearl_lightbox_class,'safely_add_stylesheet') );
 add_action('wp_head', array($pearl_lightbox_class,'pearl_lightbox_script'));
 add_shortcode('pearl_lightbox_display', array($pearl_lightbox_class,'pearl_lightbox_getImage'));
 register_activation_hook(__FILE__,array($pearl_lightbox_class,'pearl_lightbox_install'));
