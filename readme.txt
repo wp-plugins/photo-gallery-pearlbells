@@ -1,33 +1,42 @@
 === Plugin Name ===
 Contributors: lizeipe 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W884YAWEDPA9U
-Tags: Image lightbox display, Jquery lightbox,Photos in popup window,Photo Gallery Pearlbells
+Tags: Image lightbox gallery,Image gallery,Photos in popup window,Photo Gallery 
 Requires at least: 2.0.2
-Tested up to: 3.0
+Tested up to: 4.3
 Stable tag: 4.3
 
-This plugin helps to create a photo gallery for your website. This plugin display images as a thumbnail on a webpage or a blog. A lightbox / popup window will display the full size image on clicking the thumbnail. There are various features in the popup window such as slideshow, navigate to previous/next image, close the popup
-box etc.
-
+This plugin helps to create responsive photo / lightbox gallery for your webpage (pages, post, sidebar or footer). 
 
 == Description ==
 
-This plugin helps to create a photo gallery for your website. This plugin display images as a thumbnail on a webpage or a blog. A lightbox / popup window will display the full size image on clicking the thumbnail. There are various features in the popup window such as slideshow, navigate to previous/next image, close the popup
-box etc.
+This plugin display images as a thumbnail and a lightbox / popup window will display the full size image on clicking the thumbnail. 
+There are various features in the popup window such as slideshow navigate to previous/next image, close the popup box etc.
 
-How to Install - <a href="http://pearlbells.co.uk/extensions/photo-gallery">Click here</a>
+<a href='http://www.pearlbells.co.uk/install-photo-gallery/photo-gallery-demo/'>Live Demo</a>
 
+It is very easy to install and simple to use. Main steps are:
 
-It is possible to customise the display features to sync with the look and feel of your website. The customisation features include:
+ - Install and activate the plugin.
+ - Create the gallery using the ‘Add Media’ button.
+ - Enter the ‘shortcode’ or widget where you want place the gallery (pages, posts, sidebar or footer)
+
+How to Install - <a href='http://www.pearlbells.co.uk/install-photo-gallery/'>Click here</a>
+
+Main features are:
+
+ - Responsive
+ - Can add multiple galleries in one page.
+ - Show/hide thumbnail title
+
+It is possible to customise the display features to synchronise with the look and feel of your website. The customisation features include:
 
  - can set the height and width of thumbnails
  - can set border colour, background colour and border width to thumbnail
  - can add padding and margin to thumbnail
  - can display title/captions for thumbnails
- - can set number of thumbnails in a row
- - can set the height, width and background colour of the popup window/lightbox
-
-
+ - can set number of characters to be displayed in the thumbnail captions
+ - can set captions font size
 
 == Installation ==
 

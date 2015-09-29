@@ -16,6 +16,7 @@
 	text-align:center;
 	padding:0;
 	margin:0;
+        font-size : 12px;
 	
 }
 #pearl_lightbox .pearl_lightbox_active
@@ -34,7 +35,7 @@
 }
 .backdrop
 {
-	position:absolute;
+	position:fixed;
 	top:0px;
 	left:0px;
 	width:100%;
@@ -54,6 +55,7 @@
 	z-index:51;
 	text-align:center;
         overflow: hidden;
+        font-size: 14px;
 	
 }
 .box img
