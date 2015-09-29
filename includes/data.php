@@ -10,11 +10,12 @@ class pearlLightboxData {
     function pearl_getImage($atts, $content = null)
     {
         if(is_array($atts))
-            $imageIds = explode(',',$atts['ids'] );
+            $imageIds = explode(',', $atts['ids']);
         else
             $imageIds =& get_children( 'post_type=attachment&post_mime_type=image&post_parent=' . get_the_id() );
    
         $display_image = '<ul class="clearfix pearl-lightbox" >';
+        if( isset( $atts['caption'] ) )
         $is_caption = ( $atts['caption'] == 'true') ? 1 : 0 ;
      
         foreach( $imageIds as $imageID  )

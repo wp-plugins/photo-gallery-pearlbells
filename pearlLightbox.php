@@ -86,10 +86,10 @@ class pearlLightbox extends \WP_Widget {
                    value="<?php if(isset($ids)) echo esc_attr($ids);?>"/>
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('show_title')?>"> Show Title : </label>
-            <select id="<?php echo $this->get_field_id('show_title'); ?>" name="<?php echo $this->get_field_name('show_title'); ?>" class="widefat" style="width:100%;">
-                <option value="true">Yes</option>
-                <option value="false">No</option>    
+            <label for="<?php echo $this->get_field_id('caption')?>"> Show Title : </label>
+            <select id="<?php echo $this->get_field_id('caption'); ?>" name="<?php echo $this->get_field_name('caption'); ?>" class="widefat" style="width:100%;">
+                <option <?php selected( $instance['caption'], 'true' ); ?> value="true">Yes</option>
+                <option <?php selected( $instance['caption'], 'false' ); ?> value="false">No</option>    
             </select>
         </p>
        
